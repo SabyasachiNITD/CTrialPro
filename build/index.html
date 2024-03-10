@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>CTrialPro</title>
 </head>
-<body>
-    <!-- Navbar Section -->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="#home" id="navbar_logo">C-TrialPro</a>
-            <div class="navbar__toggle" id="mobile">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+<body class="font-nunito">
+    <!-- bg setup -->
+    <div class="h-1/2 sm:h-screen bg-gradient-to-t from-indigo-300 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden">
+        <!-- navbar -->
+        <nav class="w-full fixed top-0 h-16 bg-white z-10 dark:bg-slate-900"> 
+            <div class="container mx-auto py-5 flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="../src/logo_final.png" alt="CTrialPro">
+                </div>
+                <ul class="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase">
+                    <li>
+                        <a href="#">Home Page</a>
+                    </li>
+                    <li>
+                        <a href="#">Who We Are</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="#home" class="navbar__links" id="home-page">Home</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#about" class="navbar__links" id="about-us-page">About Us</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#service" class="navbar__links" id="services-page">Our Services</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#contact" class="navbar__links" id="contact-us-page">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+        </nav>
+    </div>
 </body>
 </html>
