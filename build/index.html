@@ -10,12 +10,14 @@
 </head>
 <body class="font-nunito">
     <!-- bg setup -->
-    <div class="h-1/2 sm:h-screen bg-gradient-to-t from-indigo-300 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden">
+    <div class="h-screen bg-gradient-to-t from-indigo-900 relative overflow-hidden">
         <!-- navbar -->
-        <nav class="w-full fixed top-0 h-16 bg-white z-10 dark:bg-slate-900"> 
-            <div class="container mx-auto flex items-center justify-between">
+        <nav class="w-full fixed top-0 h-16 bg-white z-10"> 
+            <div class="container mx-auto max-md:py-3 flex items-center justify-between">
                 <div class="flex items-center">
-                    <img class="w-36" src="../src/logo.png" alt="CTrialPro">
+                    <a href="#">
+                        <img class="w-36 cursor-pointer" src="../src/logo.png" alt="CTrialPro">
+                    </a>
                 </div>
                 <ul class="hidden md:flex space-x-10 text-gray-600 font-bold text-sm uppercase">
                     <li class="hover:text-red-600">
@@ -23,25 +25,63 @@
                     </li>
                     <li class="hover:text-red-600">
 
-                        <a href="#">Who We Are</a>
+                        <a href="#about">Who We Are</a>
                     </li>
                     <li class="hover:text-red-600">
 
-                        <a href="#">Our Services</a>
+                        <a href="#services">Our Services</a>
                     </li>
                     <li class="hover:text-red-600">
 
-                        <a href="#">Contact Us</a>
+                        <a href="#contact">Contact Us</a>
                     </li>
                 </ul>
-                <img class="hidden md:block w-16 cursor-pointer" src="../src/call.gif" alt="Call Us Now">
-                <div class="space-y-1 md:hidden cursor-pointer">
-                    <div class="w-6 h-1 bg-red-700"></div>
-                    <div class="w-6 h-1 bg-red-700"></div>
-                    <div class="w-6 h-1 bg-red-700"></div>
+                <!-- <a class="hidden" href="tel:09609331643" target="_blank">
+                    <img class="hidden md:block w-16 cursor-pointer" src="../src/call.gif" alt="Call Us Now">
+                </a> -->
+                <div class="hidden md:block space-x-">
+                    <a class="flex items-center py-2" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTtQLDjmZKkxVXnfTbjQrtCNhwbNdJvcmQZwhqxPJtvzRVNQJRJWcGbsGXjpTSdxRgktDt" target="_blank">
+                        <img class="w-12 cursor-pointer" src="../src/mail.gif" alt="Mail to us">
+                        <span class="hover:text-red-600 text-gray-600 font-nunito text-pretty hidden lg:inline">Write To Us</span>
+                    </a>
                 </div>
+                
+                <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-10">
+                    <div class="w-6 h-1 bg-red-600"></div>
+                    <div class="w-6 h-1 bg-red-600"></div>
+                    <div class="w-6 h-1 bg-red-600"></div>
+                </div>
+                <ul id="menu" class="bg-red-600 absolute hidden left-0 top-0 w-full p-10 rounded-b-3xl space-y-8 text-white font-semibold text-left">
+                    <li>
+                        <a id="hlink" href="#">Home Page</a>
+                    </li>
+                    <li>
+                        <a id="hlink" href="#about">Who We Are</a>
+                    </li>
+                    <li>
+                        <a id="hlink" href="#services">Our Services</a>
+                    </li>
+                    <li>
+                        <a id="hlink" href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a id="hlink" href="#career">Career</a>
+                    </li>
+                </ul>
             </div>
         </nav>
+
+        <!--Intro-->
+        <!--Image-->
+        <img class="py-16" src="../src/bg.jpg">
+        <!-- Text -->
+        <div class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-32 xl:text-7xl font-bold">
+            <span class="text-white font-bold">Welcome To CTrialPro</span>
+            <p id="text" class="text-red-500">The Best SMO in Kolkata</p>
+        </div>
+
+
     </div>
+    <script src="./js/app.js"></script>
 </body>
 </html>
