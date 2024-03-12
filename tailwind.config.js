@@ -10,7 +10,7 @@ module.exports = {
         xl:"1280px",
       },
       spacing: {
-        big: "44rem"
+        big: "44rem",
       },
     },
     fontFamily: {

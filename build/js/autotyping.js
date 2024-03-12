@@ -119,7 +119,7 @@ var AutoTyping = (function (e) {
   ]).default;
   
   
-  const exampleText = ['Site Management', 'Biospecimen Collection Study', 'GCP Workshop','Study Feasibility','Regulatory'];
+  const exampleText = ['Site Management', 'Biospecimen Collection', 'GCP Workshop','Study Feasibility','Regulatory'];
   const exampleTyping = new AutoTyping('#text', exampleText, {
       typeSpeed: 100,
       deleteSpeed: 100,
