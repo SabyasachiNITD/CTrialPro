@@ -818,6 +818,10 @@ video {
   overflow: hidden;
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .text-pretty {
   text-wrap: pretty;
 }
@@ -1081,6 +1085,10 @@ video {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
+.focus\:scroll-auto:focus {
+  scroll-behavior: auto;
+}
+
 .group:hover .group-hover\:mb-0 {
   margin-bottom: 0px;
 }
@@ -1179,6 +1187,10 @@ video {
 
   .md\:w-4\/12 {
     width: 33.333333%;
+  }
+
+  .md\:scroll-auto {
+    scroll-behavior: auto;
   }
 
   .md\:text-3xl {
