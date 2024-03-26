@@ -1,6 +1,6 @@
 ---
 Resources:
-  CTrialProSecurityGroup:
+  ctpSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Allow access on ports 80 and 22
@@ -23,9 +23,8 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
-      SubnetId: subnet-07cbeef324c1683a6
       SecurityGroupIds:
-        - Ref: CTrialProSecuriyGroup
+        - !Ref ctpSG
       KeyName: ctp
       ImageId: ami-05295b6e6c790593e
       Tags:
