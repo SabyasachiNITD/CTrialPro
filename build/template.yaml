@@ -1,0 +1,45 @@
+---
+Resources:
+  ctpSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow access on ports 80 and 22
+      GroupName: CTrialProSG
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 42.110.247.49/32
+      Tags:
+        - Key: Name
+          Value: My Securiy Group
+      VpcId: vpc-08a75402045a0d27e
+
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - !Ref ctpSG
+      KeyName: ctp
+      ImageId: ami-05295b6e6c790593e
+      Tags:
+        - Key: Name
+          Value: CTPServer
+      UserData:
+        Fn::Base64:
+          !Sub |
+            sudo su
+            yum update -y
+            yum install -y httpd
+            cd /var/www/html
+            wget https://github.com/SabyasachiNITD/CTrialPro/archive/refs/heads/master.zip
+            unzip master.zip
+            cp -r ctrialpro/* /var/www/html/
+            rm -rf ctrialpro master.zip
+            systemctl enable httpd 
+            systemctl start httpd
